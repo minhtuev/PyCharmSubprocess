@@ -4,4 +4,7 @@ import subprocess
 if __name__ == "__main__":
     print "Hey! I'm process A"
     proc = subprocess.call("ls")
-    proc = subprocess.Popen("python b.py", shell=True).communicate()
+    # this works
+    # proc = subprocess.call(["/Users/minhtuevo/anaconda/bin/python", "/Users/minhtuevo/personal/PyCharmSubprocess/b.py"])
+    # and this works too
+    proc = subprocess.call(["python", "b.py"])
